@@ -1,18 +1,15 @@
-if true then return end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- This will run last in the setup process and is a good place to configure
 -- things like custom filetypes. This just pure lua so anything that doesn't
 -- fit in the normal config locations above can go here
 
--- Set up custom filetypes
-vim.filetype.add {
-  extension = {
-    foo = "fooscript",
-  },
-  filename = {
-    ["Foofile"] = "fooscript",
-  },
-  pattern = {
-    ["~/%.config/foo/.*"] = "fooscript",
-  },
-}
+vim.cmd "set winblend=10"
+
+-- Remove unwanted formatoptions globally
+vim.opt.formatoptions:remove { "c", "r", "o" }
+
+-- Ensure formatoptions are enforced each time you open or switch to a buffer
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter", "BufReadPost", "BufNewFile" }, {
+  callback = function() vim.opt.formatoptions:remove { "c", "r", "o" } end,
+  pattern = "*", -- Applies to all files
+  desc = "Remove auto-commenting and other format options for cleaner pasting",
+})

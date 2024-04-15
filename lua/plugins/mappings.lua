@@ -39,9 +39,13 @@ return {
             "<cmd>RustLsp hover actions<cr><cmd>RustLsp hover actions<cr>",
             desc = "LSP Hover Action",
           },
-          ["<leader>ie"] = {
-            function() vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("]f", true, false, true), "n", false) end,
-            desc = "Go to next function start",
+          ["<leader>iu"] = {
+            "<cmd>AerialNavOpen<cr>",
+            desc = "Aerial Navigation",
+          },
+          ["<leader>is"] = {
+            "<cmd>AerialPrev<cr><cmd>RustLsp hover actions<cr><cmd>RustLsp hover actions<cr>",
+            desc = "Current Func + Action",
           },
           ["<leader>iy"] = { "<cmd>let @+=expand('%:~:.')<cr>", desc = "Copy relative path" },
           -- This one doesn't work half the time
