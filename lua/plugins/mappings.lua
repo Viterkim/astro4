@@ -12,10 +12,6 @@ return {
             desc = "Toggle lsp_lines",
           },
           ["<C-b>"] = { "<esc>$a;<esc>", desc = "Insert ; at end of line" },
-          -- ["<C-space>"] = {
-          --   require("rustaceanvim").hover_actions.hover_actions,
-          --   desc = "Rust Hover Actions",
-          -- },
           ["<C-t>"] = { "<esc>", desc = "For spamming to get out of stuff(we are already in normal mode)" },
 
           -- Own leadea i
@@ -38,6 +34,10 @@ return {
           ["<leader>io"] = {
             function() require("crates").show_features_popup() end,
             desc = "Show rust crate features",
+          },
+          ["<leader>it"] = {
+            "<cmd>RustLsp hover actions<cr><cmd>RustLsp hover actions<cr>",
+            desc = "LSP Hover Action",
           },
           ["<leader>ie"] = {
             function() vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("]f", true, false, true), "n", false) end,
@@ -86,11 +86,11 @@ return {
 
           -- Tabs / Buffers Movement
           ["S"] = {
-            function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+            function() require("astrocore.buffer").nav(vim.v.count1) end,
             desc = "Next buffer",
           },
           ["R"] = {
-            function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+            function() require("astrocore.buffer").nav(-vim.v.count1) end,
             desc = "Previous buffer",
           },
 

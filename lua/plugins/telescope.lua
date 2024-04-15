@@ -10,6 +10,7 @@ return {
               ["<esc>"] = actions.close,
             },
           },
+          layout_strategy = "vertical",
           file_ignore_patterns = {
             "node_modules",
             "target",

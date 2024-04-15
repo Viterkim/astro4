@@ -19,7 +19,7 @@ return {
           width = 25,
           mappings = {
             ["l"] = "open_vsplit",
-            -- ["L"] = "open_ssplit", doesn't work
+            -- ["L"] = "open_ssplit",
             ["s"] = "",
             ["S"] = "",
           },
