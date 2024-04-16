@@ -11,7 +11,7 @@ return {
             function() require("lsp_lines").toggle() end,
             desc = "Toggle lsp_lines",
           },
-          ["<C-f>"] = { "<esc>$a;<esc>", desc = "Insert ; at end of line" },
+          ["<C-b>"] = { "<esc>$a;<esc>", desc = "Insert ; at end of line" },
           ["<C-t>"] = { "<esc>", desc = "For spamming to get out of stuff(we are already in normal mode)" },
 
           -- Own leadea i
@@ -133,11 +133,11 @@ return {
             function() require("lsp_lines").toggle() end,
             desc = "Toggle lsp_lines",
           },
-          ["<C-f>"] = { "<esc>$a;<esc>:w<cr>", desc = "Insert ; at end of line" },
+          ["<C-b>"] = { "<esc>$a;<esc>:w<cr>", desc = "Insert ; at end of line" },
           ["<C-s>"] = { "<esc>:w<cr>a", desc = "Save File" },
           ["<C-t>"] = { "<esc>", desc = "Enter normal mode" },
           ["<C-p>"] = { "<esc>p", desc = "Paste" },
-          ["<C-b>"] = { "<esc>P", desc = "Paste before" },
+          ["<C-f>"] = { "<esc>P", desc = "Paste before" },
           ["<C-d>"] = {
             -- Pops up again and again
             function() require("lsp_signature").toggle_float_win() end,
