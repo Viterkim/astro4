@@ -2,7 +2,7 @@
 -- things like custom filetypes. This just pure lua so anything that doesn't
 -- fit in the normal config locations above can go here
 
-vim.cmd "set winblend=10"
+vim.cmd "set winblend=0"
 
 -- Remove unwanted formatoptions globally
 vim.opt.formatoptions:remove { "c", "r", "o" }

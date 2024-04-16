@@ -6,7 +6,12 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
+  -- Other
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  { import = "astrocommunity.lsp.lsp-signature-nvim" },
+  { import = "astrocommunity.scrolling.nvim-scrollbar" },
+  { import = "astrocommunity.project.nvim-spectre" },
+  -- Languages
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.lua" },

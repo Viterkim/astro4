@@ -11,7 +11,7 @@ return {
             function() require("lsp_lines").toggle() end,
             desc = "Toggle lsp_lines",
           },
-          ["<C-b>"] = { "<esc>$a;<esc>", desc = "Insert ; at end of line" },
+          ["<C-f>"] = { "<esc>$a;<esc>", desc = "Insert ; at end of line" },
           ["<C-t>"] = { "<esc>", desc = "For spamming to get out of stuff(we are already in normal mode)" },
 
           -- Own leadea i
@@ -22,6 +22,15 @@ return {
           ["<leader>id"] = {
             function() vim.diagnostic.open_float() end,
             desc = "Float full diagnostics",
+          },
+          ["<leader>ic"] = {
+            function()
+              vim.diagnostic.open_float()
+              vim.diagnostic.open_float()
+              vim.cmd "normal! ggVGy"
+              vim.cmd "close"
+            end,
+            desc = "Copy diagnostics to clipboard",
           },
           ["<leader>ii"] = {
             function() require("telescope.builtin").diagnostics() end,
@@ -118,30 +127,22 @@ return {
             function() require("smart-splits").move_cursor_up() end,
             desc = "Move to up split",
           },
-
-          -- Remote sshfs
-          ["<leader>sc"] = {
-            function() require("remote-sshfs.api").connect() end,
-            desc = "Remote Sshfs Connect",
-          },
-          ["<leader>sd"] = {
-            function() require("remote-sshfs.api").disconnect() end,
-            desc = "Remote Sshfs Disconnect",
-          },
-          ["<leader>se"] = {
-            function() require("remote-sshfs.api").edit() end,
-            desc = "Remote Sshfs Edit",
-          },
         },
         i = {
           ["<C-y>"] = {
             function() require("lsp_lines").toggle() end,
             desc = "Toggle lsp_lines",
           },
-          ["<C-b>"] = { "<esc>$a;<esc>:w<cr>", desc = "Insert ; at end of line" },
+          ["<C-f>"] = { "<esc>$a;<esc>:w<cr>", desc = "Insert ; at end of line" },
           ["<C-s>"] = { "<esc>:w<cr>a", desc = "Save File" },
           ["<C-t>"] = { "<esc>", desc = "Enter normal mode" },
-          ["<C-p>"] = { "<esc>lp", desc = "Paste" },
+          ["<C-p>"] = { "<esc>p", desc = "Paste" },
+          ["<C-b>"] = { "<esc>P", desc = "Paste before" },
+          ["<C-d>"] = {
+            -- Pops up again and again
+            function() require("lsp_signature").toggle_float_win() end,
+            desc = "Toggle lsp signature help window",
+          },
           ["__"] = { "<esc>:w<cr>", desc = "Save File + Enter normal mode" },
           ["_("] = { "_", desc = "Underscore (single fix)" },
         },
