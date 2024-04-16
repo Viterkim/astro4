@@ -160,7 +160,7 @@ return {
           ["<C-b>"] = { "<esc>$a;<esc>", desc = "Insert ; at end of line" },
           ["__"] = { "<esc>:w<cr>", desc = "Save File + Enter normal mode" },
           ["<Bs>"] = { "x", desc = "Delete" },
-          ["e"] = { "ygvd", desc = "Cut" },
+          ["o"] = { "ygvd", desc = "Cut" },
           ["c"] = { "ygv", desc = "Copy + Keep selection" },
         },
       },
