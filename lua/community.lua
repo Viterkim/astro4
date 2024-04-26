@@ -5,12 +5,18 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.lua" },
   -- Other
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
   { import = "astrocommunity.project.nvim-spectre" },
+  { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
+  { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
+  { import = "astrocommunity.motion.nvim-surround" },
+  -- Editing Support
+  { import = "astrocommunity.editing-support.vim-visual-multi" },
+  { import = "astrocommunity.editing-support.cutlass-nvim" },
+  { import = "astrocommunity.editing-support.todo-comments-nvim" },
   -- Languages
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.json" },
@@ -22,6 +28,7 @@ return {
   { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.cpp" },
   -- { import = "astrocommunity.pack.markdown" },
   -- { import = "astrocommunity.pack.html-css" },
 }

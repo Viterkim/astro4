@@ -36,9 +36,13 @@ return {
             function() require("telescope.builtin").diagnostics() end,
             desc = "All diagnostics",
           },
+          ["<leader>ib"] = {
+            "<cmd>RustLsp debug<cr>",
+            desc = "Debug current function",
+          },
           ["<leader>ip"] = {
-            function() require("telescope.builtin").diagnostics() end,
-            desc = "Search diagnostics",
+            "<cmd>AerialPrev<cr><cmd>RustLsp debug<cr>",
+            desc = "Debug current function",
           },
           ["<leader>io"] = {
             function() require("crates").show_features_popup() end,
