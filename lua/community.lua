@@ -10,7 +10,6 @@ return {
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
   { import = "astrocommunity.project.nvim-spectre" },
-  { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
   { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   { import = "astrocommunity.motion.nvim-surround" },
   -- Editing Support
