@@ -14,7 +14,6 @@ return {
   { import = "astrocommunity.motion.nvim-surround" },
   -- Editing Support
   { import = "astrocommunity.editing-support.vim-visual-multi" },
-  { import = "astrocommunity.editing-support.cutlass-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   -- Languages
   { import = "astrocommunity.pack.typescript" },
