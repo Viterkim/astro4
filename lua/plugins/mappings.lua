@@ -49,8 +49,11 @@ return {
             desc = "Show rust crate features",
           },
           ["<leader>it"] = {
-            "<cmd>RustLsp hover actions<cr><cmd>RustLsp hover actions<cr>",
-            desc = "LSP Hover Action",
+            function()
+              vim.lsp.buf.hover()
+              vim.lsp.buf.hover()
+            end,
+            desc = "Hover enter",
           },
           ["<leader>iu"] = {
             "<cmd>AerialNavOpen<cr>",
