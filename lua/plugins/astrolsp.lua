@@ -24,11 +24,13 @@ return {
           -- "go",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
-          -- TODO: might have to do it for TS, so ESLint can do it?
+          "typescript",
           -- "python",
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
+        "tsserver",
+        "eslint-lsp",
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
         -- "lua_ls",
       },

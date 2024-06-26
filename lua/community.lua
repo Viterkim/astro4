@@ -12,11 +12,11 @@ return {
   { import = "astrocommunity.project.nvim-spectre" },
   { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   { import = "astrocommunity.motion.nvim-surround" },
+  -- { import = "astrocommunity.recipes.telescope-lsp-mappings" },
   -- Editing Support
   { import = "astrocommunity.editing-support.vim-visual-multi" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   -- Languages
-  { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },

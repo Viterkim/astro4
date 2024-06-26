@@ -14,6 +14,11 @@ return {
           ["<C-b>"] = { "<esc>$a;<esc>", desc = "Insert ; at end of line" },
           ["<C-t>"] = { "<esc>", desc = "For spamming to get out of stuff(we are already in normal mode)" },
 
+          ["grr"] = {
+            function() require("telescope.builtin").lsp_references() end,
+            desc = "Show References",
+          },
+
           -- Own leadea i
           ["<leader>if"] = {
             function() vim.lsp.buf.code_action() end,
@@ -35,6 +40,11 @@ return {
           ["<leader>ii"] = {
             function() require("telescope.builtin").diagnostics() end,
             desc = "All diagnostics",
+          },
+
+          ["<leader>ir"] = {
+            function() require("telescope.builtin").lsp_references() end,
+            desc = "Show References",
           },
           ["<leader>ib"] = {
             "<cmd>RustLsp debug<cr>",
