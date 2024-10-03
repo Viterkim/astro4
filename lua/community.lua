@@ -9,7 +9,7 @@ return {
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.lsp.lsp-signature-nvim" },
   { import = "astrocommunity.scrolling.nvim-scrollbar" },
-  { import = "astrocommunity.project.nvim-spectre" },
+  { import = "astrocommunity.search.nvim-spectre" },
   { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   { import = "astrocommunity.motion.nvim-surround" },
   -- { import = "astrocommunity.recipes.telescope-lsp-mappings" },
@@ -21,10 +21,20 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.go" },
-  { import = "astrocommunity.pack.python" },
+  -- { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.yaml" },
-  { import = "astrocommunity.pack.sql" },
+  -- { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.docker" },
-  { import = "astrocommunity.pack.bash" },
-  { import = "astrocommunity.pack.cpp" },
+  -- { import = "astrocommunity.pack.bash" },
+  -- { import = "astrocommunity.pack.cpp" },
+  -- { import = "astrocommunity.pack.typescript" },
+  -- {
+  --   "AstroNvim/astrolsp",
+  --   optional = true,
+  --   opts = {
+  --     autocmds = {
+  --       eslint_fix_on_save = false,
+  --     },
+  --   },
+  -- },
 }
