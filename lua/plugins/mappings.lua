@@ -77,6 +77,13 @@ return {
           -- This one doesn't work half the time
           ["<leader>ix"] = { "<cmd>e ++ff=unix<cr>", desc = "Fix windows endlines" },
 
+          -- Testing
+          ["<leader>ti"] = {
+            function() require("neotest").output.open { enter = true } end,
+            desc = "Go into the testing window with the cursor",
+          },
+          ["<leader>q"] = { "<cmd>q<CR>", desc = "Quit window" },
+
           -- Keys
           ["ø"] = {
             function() vim.lsp.buf.hover() end,

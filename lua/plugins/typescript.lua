@@ -67,10 +67,15 @@ local has_prettier = function(bufnr)
 end
 
 local null_ls_formatter = function(params)
-  if vim.tbl_contains(format_filetypes, params.filetype) then return has_prettier(params.bufnr) end
-  return true
+  return vim.tbl_contains(format_filetypes, params.filetype) and has_prettier(params.bufnr) or false
 end
-local conform_formatter = function(bufnr) return has_prettier(bufnr) and { "prettierd" } or {} end
+
+local conform_formatter = function(bufnr)
+  if vim.tbl_contains(format_filetypes, vim.bo[bufnr].filetype) then
+    return has_prettier(bufnr) and { "prettierd" } or {}
+  end
+  return {}
+end
 
 return {
   { import = "astrocommunity.pack.json" },
